@@ -11,31 +11,7 @@ steps
 }
 }
 
-{
-stage ('maven test')
-{ steps {
-withMaven(jdk: 'LocalJDK', maven: 'LocalMVN') {
-    sh 'mvn test'
 }
-}
-}
-}
-
-{
-stage ('build')
-{ steps
-{
-withMaven(jdk: 'LocalJDK', maven: 'LocalMVN') {
-    sh 'mvn clean package'
-}
-}
-}
-
-}
-}
-
-
-
 
 
 
