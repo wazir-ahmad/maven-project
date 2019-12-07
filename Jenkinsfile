@@ -26,7 +26,7 @@ stage ('build')
 { steps
 {
 withMaven(jdk: 'LocalJDK', maven: 'LocalMVN') {
-    sh 'clean mvn package'
+    sh 'mvn clean package'
 }
 }
 }
