@@ -33,10 +33,7 @@ stage ('build job')
     
 }
   
-  
-  
 
-}
 
 
 
