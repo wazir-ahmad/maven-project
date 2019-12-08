@@ -10,7 +10,7 @@ steps
 }
 }
 }
-  
+  { 
 stage ('build job')
   {
     steps {   
@@ -20,6 +20,7 @@ stage ('build job')
     }}}
 }
 
+}
 
 
 
