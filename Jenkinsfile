@@ -10,7 +10,14 @@ steps
 }
 }
 }
+  
+stage ('build job')
+  {
+    steps {   
+     withMaven(jdk: 'LocalJDK', maven: 'LocalMVN') {
 
+      sh ' mvn install '
+    }}}
 }
 
 
