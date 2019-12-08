@@ -19,6 +19,22 @@ stage ('build job')
       sh ' mvn install '
     }}}
 }
+  { 
+    stage (' deploy to tomcat')
+    {
+      steps {
+  
+  sshagent(['tomcat']) {
+    sh 'scp -o StrictHostKeyChecking=no' */target/*.war ec2-user@172.31.37.250:/var/lib/tomcat/webapps/'
+  }}}
+    
+    
+  }   
+    
+}
+  
+  
+  
 
 }
 
