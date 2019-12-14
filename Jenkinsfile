@@ -12,7 +12,7 @@ pipeline {
                 branch "when-condition-ci-cd"
             } 
             steps {
-                withMaven(maven : 'LocalMaven') 
+                withMaven(maven : 'LocalMVN') 
                 {   
                     sh 'mvn compile' 
                 } 
