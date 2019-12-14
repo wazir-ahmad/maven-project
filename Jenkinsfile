@@ -23,7 +23,7 @@ pipeline {
         steps {
                 withMaven(maven : 'LocalMVN') 
                 {   
-                    sh 'mvn package' 
+                    sh 'echo hello' 
                 }            
             }
     }
