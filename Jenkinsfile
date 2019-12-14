@@ -15,11 +15,16 @@ pipeline {
                 withMaven(maven : 'LocalMVN') 
                 {   
                     sh 'mvn compile' 
-                } 
-              
-                  }
-
-
+                }            
+            }
     }      
   }
+    stage ('package') {
+        steps {
+                withMaven(maven : 'LocalMVN') 
+                {   
+                    sh 'mvn package' 
+                }            
+            }
+    }
 }
