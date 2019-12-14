@@ -3,13 +3,13 @@ pipeline {
     stages 
     {       
         stage ('SCM Checkout') {
-          git url: 'https://github.com/prakashk0301/maven-project', branch: 'when-condition-ci-cd'
+          git url: 'https://github.com/prakashk0301/maven-project', branch: 'master'
          }  
     }
     {
         stage ('Compile Stage') {
             when {
-                branch "when-condition-ci-cd"
+                branch "master"
             } 
             steps {
                 withMaven(maven : 'LocalMVN') 
