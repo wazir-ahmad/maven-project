@@ -20,6 +20,9 @@ pipeline {
     }      
   }
     { stage ('package') {
+        when {
+                branch "master"
+            } 
         steps {
                 withMaven(maven : 'LocalMVN') 
                 {   
